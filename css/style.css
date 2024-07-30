@@ -1,0 +1,142 @@
+*, html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #141221;
+}
+
+.navbar{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; 
+}
+.navbar .nav1{
+    font-size: 20px;
+}
+.navbar .nav1 a{
+    text-decoration: none;
+    color: white;
+}
+.navbar .nav2{
+    display: flex;
+    gap: 12px;
+    justify-content: end;
+}
+.navbar .nav2 a{
+    text-decoration: none;
+    color: white;
+}
+
+.text{
+    /* background-color: black; */
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    font-size: 25px;
+    color: white;
+}
+
+
+
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    height: 500px;
+    margin-bottom: 100px;
+    /* padding-top: 200px; */
+    align-items: center;
+    
+}
+.main .left{
+    
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 25rem;
+    font-size: 16px;
+    gap: 8px;
+    
+}
+
+.main .right{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10rem;
+    
+}
+.main .right img{
+    width: 800px;
+}
+
+.main .left a button{
+    background-color: #756aaf;
+    color: white;
+    
+    width: 220px;
+    height: 25px;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    
+}
+
+/* main2 */
+.main2{
+    display: flex;
+    flex-direction: row;
+    /* background-color: #756AAF ; */
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.main2 .gambar1 img{
+    /* background-color: black; */
+    width: 600px;
+}
+.main2 .teks1{
+    /* background-color: blue; */
+    color: white;
+}
+/* footer */
+
+.main3{
+    display: flex;
+    flex-direction: row;
+    /* background-color: #756AAF ; */
+    color: white;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 40px;
+}
+
+.main3 .gambar img{
+    width: 600px;
+}
+
+.footer{
+    background-color: white;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+

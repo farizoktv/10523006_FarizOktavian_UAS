@@ -1,0 +1,112 @@
+*, html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #141221;
+}
+
+.navbar{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; 
+}
+.navbar .nav1{
+    font-size: 20px;
+}
+.navbar .nav1 a{
+    text-decoration: none;
+    color: white;
+}
+.navbar .nav2{
+    display: flex;
+    gap: 12px;
+    justify-content: end;
+}
+.navbar .nav2 a{
+    text-decoration: none;
+    color: white;
+}
+
+.product{
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* height: 600px; */
+    margin-top: 175px;
+}
+
+.items1{
+    background-color: #756AAF;
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 330px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.items2{
+    background-color: #756AAF;
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 330px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.items3{
+    background-color: #756AAF;
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 330px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.items1 .harga{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-right: 100px;
+    gap: 8px;
+}
+.items2 .harga{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-right: 100px;
+    gap: 8px;
+}
+.items3 .harga{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-right: 100px;
+    gap: 8px;
+}
+
+img{
+    width: 300px;
+}

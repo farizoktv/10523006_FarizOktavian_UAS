@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A_10523006_Fariz</title>
+    <style>
+        table th{
+            background-color: rgb(110, 190, 255);
+        }
+        table td{
+            background-color: rgb(88, 255, 88);
+        }
+    </style>
+</head>
+<body onLoad="focusTxt()">
+    <!-- Form Start -->
+    <form name="form1">
+            PROGRAM ORDER HIASAN DINDING : <br> <br>
+            No Order        : <input type="text"name="txtOrder" id="order"><br>
+            ----------------------------------------------------- <br>
+            Kode Barang     : <input type="text" name="txtkodeBarang" id="kodeBarang" onkeypress="cekData(event)"><br>
+            Tulisan Dinding : <input type="text" name="txtTulisan" id="tulisanDinding" disabled> <br>
+            Harga Satuan    : <input type="text" name="txtHarga" id="harga" disabled> <br>
+            Jumlah          : <input type="text" name="txtJumlah" id="jumlah"> <br>
+        <br>
+        <input type="button" name="btn2" value="SIMPAN" onClick="simpan()">
+        <input type="button" name="btn3" value="TAMPILKAN" OnClick="tampil()">
+        <br><br>
+        No order : <span id="orderOutput"></span>
+        <br><br>
+        <table border="1" id="hasil" cellspacing="0"> </table>
+        TotalBayar : <span id="totalBayar"></span>
+    </form>
+    <!-- Form end -->
+
+    <!-- JavaScript start -->
+     <script type="text/javascript">
+
+        function cekData(event){
+            var tombol=event.which||event.getKeyCode;
+            if(tombol===13){
+                var kode=document.getElementById('kodeBarang').value;
+                if(kode=="H001"){
+                    document.getElementById('tulisanDinding').value="Berkata Baik Atau Diam";
+                    document.getElementById('harga').value="100000";
+                }
+                else if(kode=="H002"){
+                    document.getElementById('tulisanDinding').value="Kita Sering Lupa Ada Malaikat Bersama Kita Yang Dengan Teliti Mencatat Setiap Amalan Kita";
+                    document.getElementById('harga').value="150000";
+                }
+                else if(kode=="H003"){
+                    document.getElementById('tulisanDinding').value="Hidup Ini Hanya Sementara ";
+                    document.getElementById('harga').value="200000";
+                }
+                else{
+                    alert("Barang Tidak Ada...!!");
+                }
+            }
+        }
+
+        var data=[];
+        var i=0;
+        j=1;
+
+        function focusTxt(){
+            document.getElementById('order').focus();
+            document.getElementById('tulisanDinding').focus();
+            document.getElementById('harga').focus();
+            document.getElementById('jumlah').focus();
+        }
+        function simpan(){
+            var order=document.getElementById('order').value;
+            data[i]={
+                orderOutput : order,
+                kodeB : document.getElementById('kodeBarang').value,
+                tulisan : document.getElementById('tulisanDinding').value,
+                hg : document.getElementById('harga').value,
+                jml : document.getElementById('jumlah').value,
+            }
+            document.getElementById('orderOutput').innerText=order;
+            document.getElementById('order').value="";
+            document.getElementById('tulisanDinding').value="";
+            document.getElementById('harga').value="";
+            document.getElementById('jumlah').value="";
+
+            i++;
+            alert("Data Telah Disimpan");
+        }
+
+        
+        function tampil(){
+            var isi = "<tr><th>No</th><th>Kode Barang</th><th>Tulisan Dinding</th><th>Harga</th><th>Jumlah</th><th>Subtotal</th></tr>";
+            Total=data.length;
+            var totalBayar = 0;
+            for(var i=0; i<Total; i++){
+                var subtotal = data[i].hg * data[i].jml;
+                totalBayar += subtotal;
+                isi=isi+"<tr><td>"+(j++)+"</td><td>"+data[i].kodeB+"</td><td>"+data[i].tulisan+"</td><td>"+data[i].hg+"</td><td>"+data[i].jml+"</td><td>Rp."+subtotal+"</td></tr>";
+            }
+            document.getElementById('hasil').innerHTML=isi;
+            document.getElementById('totalBayar').innerText = "Rp " + totalBayar;
+        }
+     </script>
+    <!-- JavaScript end -->
+</body>
+</html>

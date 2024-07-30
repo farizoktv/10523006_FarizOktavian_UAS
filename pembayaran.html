@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pembayaran.css">
+    <title>A_10523006_Fariz</title>
+</head>
+<body onLoad="focusTxt()">
+    <!-- Navbar start -->
+    <nav class="navbar">
+        <div class="nav1"><a href="index.html">MobilMax</a></div>
+        <div class="nav2">
+            <div><a href="index.html">HOME</a></div>
+            <div><a href="about.html">ABOUT</a></div>
+            <div><a href="product.html">PRODUCT</a></div>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+    <div class="bg">
+        <div class="pembayaran">
+            <div class="form">
+                <form name="form1">
+                    <table border="0" cellspacing="0">
+                        <h2>PEMBAYARAN</h2> <br>
+                        <hr><br>
+                        <tr><td><label for="">Nama </label><td> : <input type="text" id="namaInput">
+                        <tr><td><label for="">Alamat </label><td> : <textarea id="alamatInput"></textarea>
+                        <tr><td><label for="">Kode Tipe </label><td>: <input type="text" id="kodeInput" onkeypress="cekData(event)">
+                        <tr><td><label for="">Nama Tipe Mobil </label><td> : <input type="text" id="tipeInput" disabled>
+                        <tr><td><label for="">Harga </label><td> : <input type="text" id="hargaInput" disabled>
+                        <tr><td><label for="">Jumlah </label><td> : <input type="text" id="jumlahInput">
+                    </table>
+                    <br><hr>
+                </form>
+            </div>
+            <div class="button">
+                <input type="button" class="btn2" name="btn2" value="BELI SEKARANG" onClick="beli()">
+                <a href="invoice.html"><input type="button" class="btn3" name="btn3" value="TAMPILKAN" OnClick="tampil()"></a>
+            </div>
+        </div>
+    </div>
+    <div class="output">
+        Nama : <span id="namaOutput"></span>
+        <br><br>
+        <table border="1" id="hasil" cellspacing="0"> </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

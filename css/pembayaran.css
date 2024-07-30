@@ -1,0 +1,85 @@
+*, html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #141221;
+    color: white;
+}
+
+.navbar{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; 
+}
+.navbar .nav1{
+    font-size: 20px;
+}
+.navbar .nav1 a{
+    text-decoration: none;
+    color: white;
+}
+.navbar .nav2{
+    display: flex;
+    gap: 12px;
+    justify-content: end;
+}
+.navbar .nav2 a{
+    text-decoration: none;
+    color: white;
+}
+
+.bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+.pembayaran{
+    display: flex;
+    flex-direction: column;
+    background-color:blueviolet;
+    justify-content: center;
+    align-items: center;
+    height: 380px;
+    width: 340px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.pembayaran .button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pembayaran .button .btn2{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    height: 40px;
+    width: 150px;
+}
+
+.pembayaran .button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pembayaran .button .btn3{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    height: 40px;
+    width: 150px;
+}

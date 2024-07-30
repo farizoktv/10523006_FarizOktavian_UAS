@@ -1,0 +1,67 @@
+*, html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #141221;
+}
+
+.navbar{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; 
+}
+.navbar .nav1{
+    font-size: 20px;
+}
+.navbar .nav1 a{
+    text-decoration: none;
+    color: white;
+}
+.navbar .nav2{
+    display: flex;
+    gap: 12px;
+    justify-content: end;
+}
+.navbar .nav2 a{
+    text-decoration: none;
+    color: white;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    color: white;
+    gap: 40px;
+}
+
+.about .left img{
+    width: 400px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.about .right h2{
+    font-size: 80px;
+}
+
+.about .right p{
+    font-size: 20px;
+}
+
+.about .right .medsos{
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}
+
+.about .right .medsos a{
+    text-decoration: none;
+}
