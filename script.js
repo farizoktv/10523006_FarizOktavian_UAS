@@ -31,25 +31,28 @@ function cekData(event){
         document.getElementById('jumlahInput').focus();
     }
 
-    function beli(){
-        var namaInput=document.getElementById('namaInput').value;
-        data[i]={
-            namaOutput : namaInput,
-            kodeOuput : document.getElementById('kodeInput').value,
-            alamatOutput : document.getElementById('alamatInput').value,
-            tipeOutput : document.getElementById('tipeInput').value,
-            hargaOutput : document.getElementById('hargaInput').value,
-            jumlahOutput : document.getElementById('jumlahInput').value,
+    function beli() {
+        var namaInput = document.getElementById('namaInput').value;
+        data[i] = {
+            namaOutput: namaInput,
+            kodeOuput: document.getElementById('kodeInput').value,
+            alamatOutput: document.getElementById('alamatInput').value,
+            tipeOutput: document.getElementById('tipeInput').value,
+            hargaOutput: document.getElementById('hargaInput').value,
+            jumlahOutput: document.getElementById('jumlahInput').value,
         }
-        // document.getElementById('namaOutput').innerText=namaInput;
-        document.getElementById('namaInput').value="";
-        document.getElementById('tipeInput').value="";
-        document.getElementById('hargaInput').value="";
-        document.getElementById('jumlahInput').value="";
-        
+    
+        localStorage.setItem('paymentData', JSON.stringify(data));
+    
+        document.getElementById('namaInput').value = "";
+        document.getElementById('tipeInput').value = "";
+        document.getElementById('hargaInput').value = "";
+        document.getElementById('jumlahInput').value = "";
+    
         i++;
-        alert("Pembayaran anda telah dilakukan duduk santai kami akan segeera kirim :)........");
+        alert("Pembayaran anda telah dilakukan duduk santai kami akan segera kirim :)........");
     }
+    
 
     function tampil(){
         var isi = "<tr><th>No</th><th>Alamat</th><th>kode barang</th><th>Tipe Mobil</th><th>Harga</th><th>Subtotal</th></tr>";

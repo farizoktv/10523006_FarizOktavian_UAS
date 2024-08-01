@@ -3,15 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/invoice.css">
+    <title>Invoice</title>
 </head>
 <body>
-    <div class="output">
-        Nama : <span id="namaOutput"></span>
-        <br><br>
-        <table border="1" id="hasil" cellspacing="0"> </table>
+    <div class="invoice">
+        ===============================================================================
+        <h2>INVOICE</h2>
+        ===============================================================================
+        <br>  <br>
+        <div id="invoiceContent"></div>
+        <br>
+        =============================================================================== 
     </div>
-
-    <script src="script.js"></script>
+    
+    <script>
+        window.onload = function() {
+            var data = JSON.parse(localStorage.getItem('paymentData')) || [];
+            var isi = "<table border='1' cellspacing='0'><tr><th>No</th><th>Nama</th><th>Alamat</th><th>Kode Barang</th><th>Tipe Mobil</th><th>Harga</th><th>Jumlah</th><th>Subtotal</th></tr>";
+            var totalBayar = 0;
+            for (var i = 0; i < data.length; i++) {
+                var harga = parseFloat(data[i].hargaOutput.replace(/[^0-9,-]+/g,"").replace(",","."));
+                var jumlah = parseInt(data[i].jumlahOutput);
+                var subtotal = harga * jumlah;
+                totalBayar += subtotal;
+                isi += "<tr><td>" + (i+1) + "</td><td>" + data[i].namaOutput + "</td><td>" + data[i].alamatOutput + "</td><td>" + data[i].kodeOuput + "</td><td>" + data[i].tipeOutput + "</td><td>" + data[i].hargaOutput + "</td><td>" + data[i].jumlahOutput + "</td><td>Rp. " + subtotal.toLocaleString("id-ID") + "</td></tr>";
+            }
+            isi += "<tr><td colspan='7'>Total Bayar</td><td>Rp. " + totalBayar.toLocaleString("id-ID") + "</td></tr>";
+            isi += "</table>";
+            document.getElementById('invoiceContent').innerHTML = isi;
+        }
+    </script>
 </body>
 </html>
